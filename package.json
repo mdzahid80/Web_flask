@@ -7,7 +7,7 @@
     "develop": "flask run"       
   },
   "dependencies": {
-    "bootstrap-flask": "^2.3.3",
+    "Bootstrap-Flask": "^2.3.3",
     "Flask": "^2.3.2",
     "Flask-CKEditor": "^0.5.1",
     "Flask-Gravatar": "^0.5.0",
