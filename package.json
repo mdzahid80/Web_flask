@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "Blog App",  
   "scripts": {
-    "start": "gunicorn main:app",  // Production-ready command for Cyclic.sh
-    "develop": "flask run"       // Optional: Development-mode command
+    "start": "gunicorn main:app",  
+    "develop": "flask run"       
   },
   "dependencies": {
     "bootstrap-flask": "^2.3.3",
@@ -23,9 +23,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mdzahid80/Web_flask.git" // Replace with your GitHub URL
+    "url": "git+https://github.com/mdzahid80/Web_flask.git" 
   },
   "engines": {
-    "python": ">=3.7"   // Optional: Specify minimum Python version
+    "python": ">=3.7"   
   }
 }
