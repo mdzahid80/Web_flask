@@ -1,32 +1,17 @@
 {
-  "name": "Web_Flask",  
-  "version": "1.0.0",
-  "description": "Blog App",  
-  "scripts": {
-    "start": "gunicorn main:app",  
-    "develop": "flask run"       
-  },
-  "dependencies": {
-    
-    "Flask": "^2.3.2",
-    "Flask-CKEditor": "^0.5.1",
-    "Flask-Gravatar": "^0.5.0",
-    "Flask-Login": "^0.6.3",
-    "Flask-SQLAlchemy": "^3.1.1",
-    "Flask-WTF": "^1.2.1",
-    "gunicorn": "^21.2.0",
-    "psycopg2-binary": "^2.9.9",
-    "python-dotenv": "^1.0.1",
-    "SQLAlchemy": "^2.0.25",
-    "Bootstrap-Flask": "^2.3.3",
-    "Werkzeug": "^3.0.0",
-    "WTForms": "^3.0.1"
-  },
-  "repository": {
+ "name": "Web_Flask",
+ "version": "1.0.0",
+ "description": "Blog App",
+ "scripts": {
+    "start": "gunicorn main:app",
+    "develop": "flask run",
+    "setup": "python -m venv venv && source venv/bin/activate && pip install -r requirements.txt"
+ },
+ "repository": {
     "type": "git",
-    "url": "git+https://github.com/mdzahid80/Web_flask.git" 
-  },
-  "engines": {
-    "python": ">=3.7"   
-  }
+    "url": "git+https://github.com/mdzahid80/Web_flask.git"
+ },
+ "engines": {
+    "python": ">=3.7"
+ }
 }
