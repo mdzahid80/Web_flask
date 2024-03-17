@@ -1,0 +1,31 @@
+{
+  "name": "Web_Flask",  
+  "version": "1.0.0",
+  "description": "Blog App",  
+  "scripts": {
+    "start": "gunicorn main:app",  // Production-ready command for Cyclic.sh
+    "develop": "flask run"       // Optional: Development-mode command
+  },
+  "dependencies": {
+    "bootstrap-flask": "^2.3.3",
+    "Flask": "^2.3.2",
+    "Flask-CKEditor": "^0.5.1",
+    "Flask-Gravatar": "^0.5.0",
+    "Flask-Login": "^0.6.3",
+    "Flask-SQLAlchemy": "^3.1.1",
+    "Flask-WTF": "^1.2.1",
+    "gunicorn": "^21.2.0",
+    "psycopg2-binary": "^2.9.9",
+    "python-dotenv": "^1.0.1",
+    "SQLAlchemy": "^2.0.25",
+    "Werkzeug": "^3.0.0",
+    "WTForms": "^3.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mdzahid80/Web_flask.git" // Replace with your GitHub URL
+  },
+  "engines": {
+    "python": ">=3.7"   // Optional: Specify minimum Python version
+  }
+}
