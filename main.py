@@ -5,9 +5,8 @@ from flask_ckeditor import CKEditor
 from flask_gravatar import Gravatar
 from flask_login import UserMixin, login_user, LoginManager, current_user, logout_user
 from flask_sqlalchemy import SQLAlchemy
-from sqlalchemy.orm import relationship, DeclarativeBase, Mapped, mapped_column, sessionmaker
-from sqlalchemy import  create_engine, Column, Integer, String, Text
-from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy.orm import relationship, DeclarativeBase, Mapped, mapped_column
+from sqlalchemy import Integer, String, Text
 from functools import wraps
 from werkzeug.security import generate_password_hash, check_password_hash
 from forms import CreatePostForm, RegisterForm, LoginForm, CommentForm
@@ -59,11 +58,9 @@ gravatar = Gravatar(app,
                     base_url=None)
 
 # CREATE DATABASE
-engine = create_engine(f"amazondynamodb:///?Access Key={os.getenv('AWS_ACCESS_KEY_ID')}&Secret Key={'AWS_SECRET_ACCESS_KEY'}&Domain=amazonaws.com&Region={'AWS_REGION'}")
-# CREATE DATABASE
-factory = sessionmaker(bind=engine)
-session = factory()
-Base = declarative_base()
+class Base(DeclarativeBase):
+    pass
+app.config['SQLALCHEMY_DATABASE_URI'] =(f"amazondynamodb:///?Access Key={os.getenv('AWS_ACCESS_KEY_ID')}&Secret Key={'AWS_SECRET_ACCESS_KEY'}&Domain=amazonaws.com&Region={'AWS_REGION'}")
 
 db = SQLAlchemy(model_class=Base)
 db.init_app(app)
